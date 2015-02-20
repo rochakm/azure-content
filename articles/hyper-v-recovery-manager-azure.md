@@ -102,7 +102,7 @@ After verifying the prerequisites, do the following:
 2. In the dropdown list, select **Between an on-premises Hyper-V site and Microsoft Azure**.
 3. In **Prepare VMM Servers**, click **Generate registration key** file. The key is valid for 5 days after it's generated. Copy the file to the VMM server. You'll need it when you set up the Provider.
 
-	![Registration key](./media/hyper-v-recovery-manager-configure-vault/SR_E2ARegisterKey.png)
+	![Registration key](./media/hyper-v-recovery-manager-configure-vault/SR_E2AVMMRegisterKey.png)
 
 4. On the <b>Quick Start</b> page, in **Prepare VMM servers**, click <b>Download Microsoft Azure Site Recovery Provider for installation on VMM servers</b> to obtain the latest version of the Provider installation file.
 
@@ -180,7 +180,7 @@ After VMM servers are registered, you can configure cloud protection settings. Y
 8. In <b>Frequency of application-consistent snapshots</b>, leave the default setting. This value specifies how often to create snapshots. Snapshots use Volume Shadow Copy Service (VSS) to ensure that applications are in a consistent state when the snapshot is taken.  If you do set a value, make sure it's less than the number of additional recovery points you configure.
 9. In <b>Replication start time</b>, specify when initial replication of data to Azure should start. The timezone on the Hyper-V host server will be used. We recommend that you schedule the initial replication during off-peak hours. 
 
-	![Cloud replication settings](./media/hyper-v-recovery-manager-configure-vault/SR_CloudSettingsE2A.png)
+	![Cloud replication settings](./media/hyper-v-recovery-manager-configure-vault/SR_CloudSettingsE2Anew.png)
 
 After you save the settings a job will be created and can be monitored on the <b>Jobs</b> tab. All Hyper-V host servers in the VMM source cloud will be configured for replication.
 
@@ -205,7 +205,7 @@ After servers, clouds, and networks are configured correctly, you can enable pro
 ![Modify virtual machine properties](./media/hyper-v-recovery-manager-configure-vault/SR_EnableVMME2AExisting.png)
 
 
-1. To enable protection, on the <b>Virtual Machines</b> tab in the cloud in which the virtual machine is located, click <b>Enable protection</b> and then select <b>Add virtual machines</b>
+1. To enable protection, on the <b>Virtual Machines</b> tab in the cloud in which the virtual machine is located, click <b>Add virtual machines</b>
 2. From the list of virtual machines in the cloud, select the one you want to protect. 
 
 	![Enable virtual machine protection](./media/hyper-v-recovery-manager-configure-vault/SR_EnableVMME2ASelectVM.png)
